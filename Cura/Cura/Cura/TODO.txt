@@ -1,0 +1,163 @@
+﻿														-----------------------
+															Things To do
+														-----------------------
+
+==========
+To Do
+==========
+
+*Search by name or P/E Number (just do a button that changes image)									[DONE]
+*Settings																							[DONE]
+*Implement help system.																				[DONE]
+*Change tracker system.																				[DONE]
+*Implement multi select calls dragging.																[DONE]
+*Service user service period thing - only show in their period										[DONE]
+*Important flag on the notes section.																[DONE]
+*History of calls for workers and service users.													[DONE]
+*About form																							[DONE]
+*Historical data for call assignment.																[DONE]
+*Worker List / Service User List - Containing All.													[DONE]
+*6 Week Rota System.																				[DONE]
+*Calls Pass Over Timezones																			[DONE]
+*Overtime for worker check																			[DONE]
+*Save worker availability.																			[DONE]
+*Show current week on main screen on loadup															[DONE]
+*Fix the rota printing so it works correctly with named files.										[DONE]
+*Implement undo call changes system.																[DONE]
+*Calendar days show how many calls on a day.														[DONE]
+*Grouping workers.. group on right click.															[DONE]
+*Flags on call, show image on call																	[DONE]
+*Fix wierd flickering when creating multiple calls													[DONE]
+*Add the date the call is for on the call frm.														[DONE]
+*Weekly pdf rota, multiworker, pop up a box asking which weeks to print for.						[DONE]
+*Add first and second line address for service users.												[DONE]
+*Add first and second line address for workers.														[DONE]
+*Note on call																						[DONE]
+*Change service user age -> use DOB																	[DONE]
+*Right click delete button																			[DONE]
+*Message on closure if pending changes.																[DONE]
+*Call right click menu, flag, note etc, edit?														[DONE]
+*Make worker list switch to show indiv and groups.													[DONE]
+*Make it so the user can select how long the rota period is.										[DONE]
+*Change Key Service Users from worker.																[DONE]
+*Tab ... on the end of text																			[DONE]
+*Keyworkers not saving																				[DONE]
+*drag drop multiple not assigning correctly.														[DONE]
+*Pending changes shows deletion even if its not saved.												[DONE]
+*Cancel future calls <--- right click menu item.													[DONE]
+*Make check that doesnt allow calls outside a service users service period.							[DONE]
+*Scroll to show call when added to a workers calendar												[DONE]
+*Create nice toString for calls																		[DONE]
+*Call edit																							[DONE]
+*Right click duplicate call button																	[DONE]
+*Calculate Worker hours covered / remaining.														[DONE]
+*Guess best 10 workers for call -nearly done... just needs hours remaining.							[DONE]
+*Work out service user call times for a																[DONE]
+*Alert on call overlap for service user																[DONE]
+*Prevent call over lap on worker																	[DONE]
+*Local database for pcodes																			[DONE]
+*Save worker holiday/sickdays. dont allow assignment on holiday/sickdays							[DONE]
+*Day item count not refreshing on change service user												[DONE]
+*Display holiday rota.. scrollable between weeks.													[DONE]
+*Item count drawing on short calendar style															[DONE]
+*Set holiday and sick for given amount of days (inc exclude weekends)								[DONE]
+*Russian dolls with the key worker/service users													[DONE]
+*Worker sickness interface selection - same as holiday												[DONE]
+*Worker holiday saving																				[DONE]
+*Worker sickness saving																				[DONE] 
+*Allow calls on sick days, check with user whether to delete them?									[DONE]
+*Ask user if they want to copy key worker/service users when duplicating.							[DONE]
+*Key workers in historical data																		[DONE]
+*Add travel time on a call.																			[DONE]
+*Duplicate future call issue																		[DONE]
+*Make unassigned calls easier to see at a glance.													[DONE]
+*Add serviceuser address on the rota.																[DONE]		
+*Make worker calendar show call as being the call duration and the travel time.						[DONE]
+*Do something with the change of working hours														[DONE]
+*Remove single time training button.																[DONE]
+*Open excel sheet with overview data																[DONE]
+*Populate the overview tab																			[DONE]
+*Splash Screen																						[DONE]
+*Printable list of all weekly calls + covered + .. something. ... excel? what is needed?			[DONE]
+*View unassigned calls. Menu button on toolbar														[DONE]
+*Call History - Need To Show Whos Covered By														[DONE]
+*Refresh workers scrolls to top.																	[DONE]
+*Only load one instance of the app.																	[DONE]
+*Worker PDF not loading with calls.																	[DONE]
+*Popup over call covered is broken .. showing wrong people.											[DONE]
+*Relevant worker distance bug																		[DONE]
+*Redo day off stuff in availability																	[DONE]
+*save days off data for workers																		[DONE]
+*Grey out day off.																					[DONE]
+*Window loading underneath other ones.																[DONE]
+*Ctrl clikck for mulitple service users clearing right click button options							[DONE]
+*Not clearing service user after their period is up.												[DONE]
+* Make worker overtime take into consideration the days off.										[DONE]
+*Unassign call right click menu																		[DONE]
+*Day off image icon																					[DONE]
+*Change service period not resetting SU calls.														[DONE]
+*Reset all data when new data file is selected.														[DONE]
+*Calls missing in call history. -was showing periodly only											[DONE]
+*Only allow service period change if no calls need assigning in the current period.					[DONE]
+*Move around stuff on main form to make more room													[DONE]		
+*Show days off on the holiday tracker calendar														[DONE]
+*Day off split container is borked																	[DONE]
+*Loading workers and calls outside rota period for next unassigned call. :(							[DONE]
+*Map size is borked.																				[DONE]
+*Added loading screen																				[DONE]
+* Count in call history																				[DONE]
+*Tabs close if click on a certain part of it on the right (where the close used to be)				[DONE]
+*Backup Restore																						[DONE]
+*Only refresh calendar items when there are changes.												[DONE]
+*safe sql!																							[DONE]				
+*Fix Holiday Rota																					[DONE]
+*Make images line up without spaces!																[DONE]
+*Can the saving stuff be made more effiecient?														[DONE]
+*Combine queries? Less db access? Cacheing?															[DONE]
+*travel time calculations																			[DONE]
+*holiday on day off??																				[DONE]
+*Right click instead of left click release on assigning call										[DONE]
+*Remaining working hours for top ten? should be per week i think and maybe this is not showing in hours?? [DONE]
+
+
+= EASY =
+
+= HARD =  
+*Worker absence track changes
+*Worker hours on calendar need to be related to working hours
+
+==================
+Bugs
+=================
+
+*Call overlap error when there isnt overlap - cant seem to reproduce
+*Drawing of calls on worker calendar needs to be wider
+*Fix the mis drawing of calls on the calendar. should be like this
+
+
+-----------------------------------
+|			|				|  S  |
+|			|				|  P  |
+|	 CALL	|	  CALL	    |  A  |
+|			|				|  C  |
+|			|				|  E  |
+-----------------------------------
+===========================
+Final Things
+==========================
+
+*Tag the big players with console prints and times so we can see who is takening the longest to do stuff.
+*How should the worker time stuff be displayed? 0.5? 30mins? 1.30?
+*Nicerfy the change section
+*Populate Help Section
+*Tidyup & Housekeeping.
+*Friendly Error Handling
+*Straighten up the form layout a bit.
+*Efficiency 
+
+
+================================
+Rsources
+================================
+
+http://www.colourbox.com/search/find/q//editorial/no/orientation/all/order/published/resolution/all/status/2/supplier/1330/limit/500/adultfilter_disabled/0/page/2

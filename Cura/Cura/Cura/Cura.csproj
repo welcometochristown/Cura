@@ -1,0 +1,851 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F211D5B-176B-4E55-9614-A649B82554CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cura</RootNamespace>
+    <AssemblyName>Cura</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cura.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CG.Controls.Grid">
+      <HintPath>..\lib\PFGrid\CG.Controls.Grid.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\lib\itextsharp\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\lib\itextsharp\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\lib\itextsharp\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="KRBTabControl">
+      <HintPath>..\lib\KRBTabControl\KRBTabControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>..\lib\ObjectListView\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\lib\SqlLite\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.Calendar, Version=1.0.3526.15150, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Calendar\System.Windows.Forms.Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\lib\ZedGraph\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbsenceCollection.cs" />
+    <Compile Include="Availability.cs" />
+    <Compile Include="AvailabilityCollection.cs" />
+    <Compile Include="BulkInsertData.cs" />
+    <Compile Include="Call.cs" />
+    <Compile Include="CallCollection.cs" />
+    <Compile Include="CallManager.cs" />
+    <Compile Include="ChangeItem.cs" />
+    <Compile Include="ChangeTracker.cs" />
+    <Compile Include="Common\Collection.cs" />
+    <Compile Include="Common\CollectionChangeEventArgs.cs" />
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\Database.cs" />
+    <Compile Include="Common\DateCalculations.cs" />
+    <Compile Include="Common\GoogleMaps.cs" />
+    <Compile Include="Common\ImageGenerator.cs" />
+    <Compile Include="Common\ImageManager.cs" />
+    <Compile Include="Common\Info.cs" />
+    <Compile Include="Controls\ColorCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorCombo.Designer.cs">
+      <DependentUpon>ColorCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Calendar\CalendarCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\Calendar\CalendarCtrl.Designer.cs">
+      <DependentUpon>CalendarCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Calendar\CalendarDayCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\Calendar\CalendarDayCtrl.Designer.cs">
+      <DependentUpon>CalendarDayCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Calendar\CalendarDayItem.cs" />
+    <Compile Include="Controls\Common\Calendar\CalendarObject.cs" />
+    <Compile Include="Controls\Common\Filter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\Filter.Designer.cs">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\GoogleMap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\GoogleMap.Designer.cs">
+      <DependentUpon>GoogleMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\GoogleMapAddress.cs" />
+    <Compile Include="Controls\Common\GoogleMapLocation.cs" />
+    <Compile Include="Common\LongLat.cs" />
+    <Compile Include="Controls\Common\NewProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\NewProgressBar.Designer.cs">
+      <DependentUpon>NewProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\GoogleMapMarker.cs" />
+    <Compile Include="Controls\DashedPanelCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DashedPanelCtrl.designer.cs">
+      <DependentUpon>DashedPanelCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HelpCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HelpCtrl.Designer.cs">
+      <DependentUpon>HelpCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HolidayCtrlRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HolidayCtrlRow.Designer.cs">
+      <DependentUpon>HolidayCtrlRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageCombo\ComboBoxItem.cs" />
+    <Compile Include="Controls\ImageCombo\ComboCollection.cs" />
+    <Compile Include="Controls\ImageCombo\ImagedComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PeriodOverviewCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PeriodOverviewCtrl.Designer.cs">
+      <DependentUpon>PeriodOverviewCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SoloServiceUserListCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SoloServiceUserListCtrl.Designer.cs">
+      <DependentUpon>SoloServiceUserListCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SoloWorkerListCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SoloWorkerListCtrl.Designer.cs">
+      <DependentUpon>SoloWorkerListCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WeekCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WeekCtrl.Designer.cs">
+      <DependentUpon>WeekCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuraEgg\SnakeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CuraEgg\SnakeFrm.Designer.cs">
+      <DependentUpon>SnakeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BackupRestoreFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BackupRestoreFrm.Designer.cs">
+      <DependentUpon>BackupRestoreFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseFrm.Designer.cs">
+      <DependentUpon>BaseFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CallCoverLabelFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CallCoverLabelFrm.Designer.cs">
+      <DependentUpon>CallCoverLabelFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CallFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CallFrm.Designer.cs">
+      <DependentUpon>CallFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServiceUserCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServiceUserCtrl.Designer.cs">
+      <DependentUpon>ServiceUserCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServiceUserHeaderCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServiceUserHeaderCtrl.Designer.cs">
+      <DependentUpon>ServiceUserHeaderCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServiceUserCalendarCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServiceUserCalendarCtrl.Designer.cs">
+      <DependentUpon>ServiceUserCalendarCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServiceUserListCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServiceUserListCtrl.Designer.cs">
+      <DependentUpon>ServiceUserListCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WorkerCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WorkerCtrl.Designer.cs">
+      <DependentUpon>WorkerCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common\ErrorMsgFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common\ErrorMsgFrm.Designer.cs">
+      <DependentUpon>ErrorMsgFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DayCountFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DayCountFrm.Designer.cs">
+      <DependentUpon>DayCountFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DuplicateCallFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DuplicateCallFrm.Designer.cs">
+      <DependentUpon>DuplicateCallFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FutureCallDeletionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FutureCallDeletionFrm.Designer.cs">
+      <DependentUpon>FutureCallDeletionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HelpFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HelpFrm.Designer.cs">
+      <DependentUpon>HelpFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HistoryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistoryFrm.Designer.cs">
+      <DependentUpon>HistoryFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HolidayFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HolidayFrm.Designer.cs">
+      <DependentUpon>HolidayFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HolidayRotaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HolidayRotaFrm.Designer.cs">
+      <DependentUpon>HolidayRotaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LibraryHelpFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LibraryHelpFrm.Designer.cs">
+      <DependentUpon>LibraryHelpFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoadingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoadingFrm.Designer.cs">
+      <DependentUpon>LoadingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewGroupFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewGroupFrm.Designer.cs">
+      <DependentUpon>NewGroupFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PendingChangesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PendingChangesFrm.Designer.cs">
+      <DependentUpon>PendingChangesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RotaPrintMenuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RotaPrintMenuFrm.Designer.cs">
+      <DependentUpon>RotaPrintMenuFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServiceUserFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceUserFrm.Designer.cs">
+      <DependentUpon>ServiceUserFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServiceUserListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceUserListFrm.Designer.cs">
+      <DependentUpon>ServiceUserListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsFrm.Designer.cs">
+      <DependentUpon>SettingsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Test2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Test2.Designer.cs">
+      <DependentUpon>Test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TopCallWorkersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TopCallWorkersFrm.Designer.cs">
+      <DependentUpon>TopCallWorkersFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkerFrm.Designer.cs">
+      <DependentUpon>WorkerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WorkerHeaderCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WorkerHeaderCtrl.Designer.cs">
+      <DependentUpon>WorkerHeaderCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WorkerListCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WorkerListCtrl.Designer.cs">
+      <DependentUpon>WorkerListCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WorkerCalendarCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WorkerCalendarCtrl.Designer.cs">
+      <DependentUpon>WorkerCalendarCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkerListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkerListFrm.Designer.cs">
+      <DependentUpon>WorkerListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Absence.cs" />
+    <Compile Include="Loading.cs" />
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectManager.cs" />
+    <Compile Include="OldConstructable.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RotaPeriod.cs" />
+    <Compile Include="Saveable.cs" />
+    <Compile Include="ServiceUser.cs" />
+    <Compile Include="ServiceUserCollection.cs" />
+    <Compile Include="ServiceUserManager.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopWorkersViewModel.cs" />
+    <Compile Include="Worker.cs" />
+    <Compile Include="WorkerCollection.cs" />
+    <Compile Include="WorkerGroup.cs" />
+    <Compile Include="WorkerGroupCollection.cs" />
+    <Compile Include="WorkerGroupManager.cs" />
+    <Compile Include="WorkerGroupViewModel.cs" />
+    <Compile Include="WorkerManager.cs" />
+    <EmbeddedResource Include="Controls\Common\Calendar\CalendarCtrl.resx">
+      <DependentUpon>CalendarCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Common\Calendar\CalendarDayCtrl.resx">
+      <DependentUpon>CalendarDayCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Common\Filter.resx">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Common\GoogleMap.resx">
+      <DependentUpon>GoogleMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DashedPanelCtrl.resx">
+      <DependentUpon>DashedPanelCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HelpCtrl.resx">
+      <DependentUpon>HelpCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HolidayCtrlRow.resx">
+      <DependentUpon>HolidayCtrlRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PeriodOverviewCtrl.resx">
+      <DependentUpon>PeriodOverviewCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WeekCtrl.resx">
+      <DependentUpon>WeekCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WorkerHeaderCtrl.resx">
+      <DependentUpon>WorkerHeaderCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuraEgg\SnakeFrm.resx">
+      <DependentUpon>SnakeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BackupRestoreFrm.resx">
+      <DependentUpon>BackupRestoreFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseFrm.resx">
+      <DependentUpon>BaseFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CallCoverLabelFrm.resx">
+      <DependentUpon>CallCoverLabelFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CallFrm.resx">
+      <DependentUpon>CallFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServiceUserCalendarCtrl.resx">
+      <DependentUpon>ServiceUserCalendarCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServiceUserCtrl.resx">
+      <DependentUpon>ServiceUserCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServiceUserHeaderCtrl.resx">
+      <DependentUpon>ServiceUserHeaderCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServiceUserListCtrl.resx">
+      <DependentUpon>ServiceUserListCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WorkerCalendarCtrl.resx">
+      <DependentUpon>WorkerCalendarCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WorkerCtrl.resx">
+      <DependentUpon>WorkerCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WorkerListCtrl.resx">
+      <DependentUpon>WorkerListCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common\ErrorMsgFrm.resx">
+      <DependentUpon>ErrorMsgFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DayCountFrm.resx">
+      <DependentUpon>DayCountFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DuplicateCallFrm.resx">
+      <DependentUpon>DuplicateCallFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FutureCallDeletionFrm.resx">
+      <DependentUpon>FutureCallDeletionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HelpFrm.resx">
+      <DependentUpon>HelpFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistoryFrm.resx">
+      <DependentUpon>HistoryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HolidayFrm.resx">
+      <DependentUpon>HolidayFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HolidayRotaFrm.resx">
+      <DependentUpon>HolidayRotaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LibraryHelpFrm.resx">
+      <DependentUpon>LibraryHelpFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoadingFrm.resx">
+      <DependentUpon>LoadingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewGroupFrm.resx">
+      <DependentUpon>NewGroupFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PendingChangesFrm.resx">
+      <DependentUpon>PendingChangesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RotaPrintMenuFrm.resx">
+      <DependentUpon>RotaPrintMenuFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceUserListFrm.resx">
+      <DependentUpon>ServiceUserListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingsFrm.resx">
+      <DependentUpon>SettingsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Test2.resx">
+      <DependentUpon>Test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TopCallWorkersFrm.resx">
+      <DependentUpon>TopCallWorkersFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkerListFrm.resx">
+      <DependentUpon>WorkerListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceUserFrm.resx">
+      <DependentUpon>ServiceUserFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkerFrm.resx">
+      <DependentUpon>WorkerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_undo_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm-Arrow-Left-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm-Arrow-Right-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page-copy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changelog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table-undo-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\History-Folder-Willow-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_refresh_captcha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_bw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double_user_bwhalf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double_user_bw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\service_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\service_useradd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\backup-restore-icon.png" />
+    <None Include="Resources\transmit_go.png" />
+    <None Include="Resources\transmit_remove.png" />
+    <None Include="Resources\note.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\map.png" />
+    <None Include="Resources\phone.png" />
+    <None Include="Resources\vcard_edit.png" />
+    <None Include="Resources\telephone.png" />
+    <None Include="Resources\pdf_icon.gif" />
+    <None Include="Resources\user_red.png" />
+    <None Include="Resources\pill.png" />
+    <None Include="Resources\header2.jpg" />
+    <None Include="Resources\exclamation.png" />
+    <None Include="Resources\h2_lets-begin.png" />
+    <None Include="Resources\begin_header1.png" />
+    <None Include="Resources\begin_header0.png" />
+    <None Include="Resources\begin_header_orange.png" />
+    <None Include="Resources\header.png" />
+    <None Include="Resources\clock_error.png" />
+    <None Include="Resources\Nuvola_arrow_right_pink.png" />
+    <None Include="Resources\male.png" />
+    <None Include="Resources\female.png" />
+    <None Include="Resources\shield.png" />
+    <None Include="Resources\world.png" />
+    <None Include="Resources\error_red.png" />
+    <None Include="Resources\top-10-excel-ti-1.png" />
+    <None Include="Resources\helperman.png" />
+    <None Include="Resources\helperman_48.png" />
+    <None Include="Resources\questionmark_16.png" />
+    <None Include="Resources\questionmark_16_orange.png" />
+    <None Include="Resources\questionmark_16_blue.png" />
+    <None Include="Resources\thermometer-remove-icon.png" />
+    <None Include="Resources\thermometer-go-icon.png" />
+    <None Include="Resources\question_guy_256.png" />
+    <None Include="Resources\question_guy_128.png" />
+    <None Include="Resources\sphereback.png" />
+    <None Include="Resources\font.png" />
+    <None Include="Resources\Help_book_support_question_mark_bookmark_reading.png" />
+    <None Include="Resources\accept.png" />
+    <None Include="Resources\spannerman_128.png" />
+    <None Include="Resources\house_go.png" />
+    <None Include="Resources\History-Folder-Willow-icon_48.png" />
+    <None Include="Resources\house_user.png" />
+    <None Include="Resources\ohnoman_128.png" />
+    <None Include="Resources\note_error.png" />
+    <None Include="Resources\icon_16.png" />
+    <None Include="Resources\header_red.png" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\s_user.png" />
+    <None Include="Resources\s_user_16.png" />
+    <None Include="Resources\s_user_add.png" />
+    <None Include="Resources\star_16.png" />
+    <None Include="Resources\star_bw_16.png" />
+    <None Include="Resources\icon_fuscia.png" />
+    <None Include="Resources\sidepointman.png" />
+    <None Include="Resources\sidepointman_small.png" />
+    <None Include="Resources\flag_blue.png" />
+    <None Include="Resources\flag_green.png" />
+    <None Include="Resources\flag_orange.png" />
+    <None Include="Resources\flag_pink.png" />
+    <None Include="Resources\flag_purple.png" />
+    <None Include="Resources\flag_red.png" />
+    <None Include="Resources\flag_yellow.png" />
+    <None Include="Resources\splashicon.png" />
+    <None Include="Resources\header_alpha.png" />
+    <None Include="Resources\header_alpha2.png" />
+    <None Include="Resources\user_question.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\eraser.png" />
+    <None Include="Resources\page_copy.png" />
+    <None Include="Resources\training.png" />
+    <None Include="Resources\training_remove.png" />
+    <None Include="Resources\clock_link.png" />
+    <None Include="Resources\clock_red.png" />
+    <None Include="Resources\splash.png" />
+    <None Include="Resources\Loading.gif" />
+    <None Include="Resources\loading2.gif" />
+    <None Include="Resources\bobux_loading.gif" />
+    <None Include="Resources\header_short.png" />
+    <None Include="Resources\header_red_short.png" />
+    <None Include="Resources\drag_multi.png" />
+    <None Include="Resources\drag_single.png" />
+    <None Include="Resources\dayoff.png" />
+    <None Include="Resources\header_verylong.png" />
+    <None Include="Resources\site-backup-and-restore-icon.png" />
+    <None Include="Resources\bluestar.png" />
+    <Content Include="cura.ico" />
+    <None Include="Resources\table-excel-icon.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\arrow_right.png" />
+    <None Include="Resources\lightning_go.png" />
+    <None Include="Resources\lightning.png" />
+    <Content Include="License_Trial.txt" />
+    <None Include="Resources\arrow_refresh.png" />
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
