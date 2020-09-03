@@ -1,0 +1,9 @@
+C:\Users\chris.townsend\Desktop\Cura\Cura\Tools\bin\Release\Tools.exe.config
+C:\Users\chris.townsend\Desktop\Cura\Cura\Tools\bin\Release\Tools.exe
+C:\Users\chris.townsend\Desktop\Cura\Cura\Tools\bin\Release\Tools.pdb
+C:\Users\chris.townsend\Desktop\Cura\Cura\Tools\obj\Release\Tools.csprojResolveAssemblyReference.cache
+C:\Users\chris.townsend\Desktop\Cura\Cura\Tools\obj\Release\Tools.Form1.resources
+C:\Users\chris.townsend\Desktop\Cura\Cura\Tools\obj\Release\Tools.Properties.Resources.resources
+C:\Users\chris.townsend\Desktop\Cura\Cura\Tools\obj\Release\Tools.csproj.GenerateResource.Cache
+C:\Users\chris.townsend\Desktop\Cura\Cura\Tools\obj\Release\Tools.exe
+C:\Users\chris.townsend\Desktop\Cura\Cura\Tools\obj\Release\Tools.pdb

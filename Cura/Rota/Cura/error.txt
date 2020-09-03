@@ -1,0 +1,73 @@
+[17/11/2013 22:57:18]
+Error Selecting Rota Period
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Cura.CallManager.ClearAllCalls() in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\DinkinFlicka\DinkinFlicka\CallManager.cs:line 188
+   at Cura.CallManager.LoadCalls(DateTime periodStart) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\DinkinFlicka\DinkinFlicka\CallManager.cs:line 197
+   at Cura.CallManager.set_CurrentRotaPeriodStart(DateTime value) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\DinkinFlicka\DinkinFlicka\CallManager.cs:line 211
+   at Cura.MainFrm.weekSelectionCombo_SelectedIndexChanged(Object sender, EventArgs e) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\DinkinFlicka\DinkinFlicka\MainFrm.cs:line 391
+Version(0.0.1b (Beta))
+
+[21/11/2013 09:56:46]
+There was an error saving some of the pending changes
+System.Data.SQLite.SQLiteException: SQLite error
+too many SQL variables
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at Cura.Common.Database.ExecuteDatabaseQuery(String connectionstring, String query, Object[] param, QueryType type) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Common\Database.cs:line 157
+   at Cura.Common.Database.ExecuteDatabaseStatement(String statement, Object[] param) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Common\Database.cs:line 218
+   at Cura.Forms.PendingChangesFrm.saveTSbtn_Click(Object sender, EventArgs e) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Forms\PendingChangesFrm.cs:line 111
+Version(0.0.1b (Beta))
+
+[21/11/2013 09:58:41]
+There was an error saving some of the pending changes
+System.Data.SQLite.SQLiteException: SQLite error
+too many SQL variables
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at Cura.Common.Database.ExecuteDatabaseQuery(String connectionstring, String query, Object[] param, QueryType type) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Common\Database.cs:line 157
+   at Cura.Common.Database.ExecuteDatabaseStatement(String statement, Object[] param) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Common\Database.cs:line 218
+   at Cura.Forms.PendingChangesFrm.saveTSbtn_Click(Object sender, EventArgs e) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Forms\PendingChangesFrm.cs:line 111
+Version(0.0.1b (Beta))
+
+[21/11/2013 09:59:08]
+There was an error saving some of the pending changes
+System.Data.SQLite.SQLiteException: SQLite error
+too many SQL variables
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at Cura.Common.Database.ExecuteDatabaseQuery(String connectionstring, String query, Object[] param, QueryType type) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Common\Database.cs:line 157
+   at Cura.Common.Database.ExecuteDatabaseStatement(String statement, Object[] param) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Common\Database.cs:line 218
+   at Cura.Forms.PendingChangesFrm.saveTSbtn_Click(Object sender, EventArgs e) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Forms\PendingChangesFrm.cs:line 111
+Version(0.0.1b (Beta))
+
+[21/11/2013 10:01:43]
+There was an error saving some of the pending changes
+System.Data.SQLite.SQLiteException: SQLite error
+too many SQL variables
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at Cura.Common.Database.ExecuteDatabaseQuery(String connectionstring, String query, Object[] param, QueryType type) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Common\Database.cs:line 157
+   at Cura.Common.Database.ExecuteDatabaseStatement(String statement, Object[] param) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Common\Database.cs:line 218
+   at Cura.Forms.PendingChangesFrm.saveTSbtn_Click(Object sender, EventArgs e) in g:\Code\C-Sharp\DinkinFlicka\DinkinFlicka\Forms\PendingChangesFrm.cs:line 111
+Version(0.0.1b (Beta))
+

@@ -1,0 +1,9 @@
+E:\Code\C-Sharp\Cura\Cura\Tools\bin\Debug\Tools.exe.config
+E:\Code\C-Sharp\Cura\Cura\Tools\bin\Debug\Tools.exe
+E:\Code\C-Sharp\Cura\Cura\Tools\bin\Debug\Tools.pdb
+E:\Code\C-Sharp\Cura\Cura\Tools\obj\Debug\Tools.csprojResolveAssemblyReference.cache
+E:\Code\C-Sharp\Cura\Cura\Tools\obj\Debug\Tools.Form1.resources
+E:\Code\C-Sharp\Cura\Cura\Tools\obj\Debug\Tools.Properties.Resources.resources
+E:\Code\C-Sharp\Cura\Cura\Tools\obj\Debug\Tools.csproj.GenerateResource.Cache
+E:\Code\C-Sharp\Cura\Cura\Tools\obj\Debug\Tools.exe
+E:\Code\C-Sharp\Cura\Cura\Tools\obj\Debug\Tools.pdb
